@@ -82,8 +82,6 @@ elif ((d==0).all()==True):
 '''
 import networkx as nx
 import matplotlib.pyplot as plt
-import numpy as np
-from numpy import random
 
 G = nx.Graph()
 Matrix =matrix_d
