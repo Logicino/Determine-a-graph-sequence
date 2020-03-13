@@ -67,31 +67,19 @@ elif ((d==0).all()==True):
             matrix_d[k:k+1,i:i+1] = matrix_result[i:i+1,k:k+1] - matrix_result[i+1:i+2,k:k+1]
 
     print(matrix_d)
-'''
+
     import networkx as nx
     import matplotlib.pyplot as plt
 
     G = nx.Graph()
+    Matrix =matrix_d
 
-    for i in range(len(matrix_d)):
-        for j in range(len(matrix_d)):
-            G.add_edge(i, j)
+    #print(Matrix)
 
-    nx.draw(G,with_labels=True, font_weight='bold')
+    for i in range(len(Matrix)):
+        for j in range(len(Matrix)):
+            if Matrix[i, j]!= 0:
+              G.add_edge(i, j)
+
+    nx.draw(G,with_labels=True,font_weight='bold')
     plt.show()
-'''
-import networkx as nx
-import matplotlib.pyplot as plt
-
-G = nx.Graph()
-Matrix =matrix_d
-
-#print(Matrix)
-
-for i in range(len(Matrix)):
-    for j in range(len(Matrix)):
-        if Matrix[i, j]!= 0:
-          G.add_edge(i, j)
-
-nx.draw(G,with_labels=True,font_weight='bold')
-plt.show()
